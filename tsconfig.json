@@ -18,17 +18,9 @@
 		"noUnusedLocals": true,
 		"noUnusedParameters": true,
 		"noFallthroughCasesInSwitch": true,
-		"baseUrl": "./",
+		"baseUrl": ".",
 		"paths": {
-			"~/*": ["src/*"],
-			"@components/*": ["src/components/*"],
-			"@assets/*": ["src/assets/*"],
-			"@hooks/*": ["src/hooks/*"],
-			"@scripts/*": ["src/scripts/*"],
-			"@api/*": ["src/api/*"],
-			"@store/*": ["src/store/*"],
-			"@pages/*": ["src/pages/*"],
-			"@styles/*": ["src/styles/*"]
+			"@/*": ["./src/*"]
 		},
 		"types": ["vite-plugin-svgr/client"]
 	},
