@@ -1,20 +1,21 @@
 import { User } from '@/models/user'
 import { api } from './api'
 
-interface UserBody {
-	token: string
-}
-
 const sessionsApi = api.injectEndpoints({
 	endpoints: builder => ({
 		getUserData: builder.query<User, string>({
-			query: (session: string) => `/comm/session/user?session_id=${session}`,
+			query: (session: string) =>
+				`/comm/session/user?session_id=${session}&format=json`,
 		}),
-		getSession: builder.mutation<{ session: string }, UserBody>({
+		getSession: builder.mutation<{ session: string }, { token: string }>({
 			query: commentsData => ({
 				body: commentsData,
 				url: '/comm/session/get',
 				method: 'POST',
+				headers: {
+					Accept: 'application/json',
+					'Content-Type': 'application/json',
+				},
 			}),
 		}),
 	}),

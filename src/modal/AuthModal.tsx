@@ -17,7 +17,7 @@ const AuthDialog = () => {
 	const isShown = useSelector((state: RootState) => state.authModal.isShown)
 	const dispatch = useDispatch()
 	const { show, setShow } = useContext(ModalContext)
-	const [token, settoken] = useState('')
+	const [token, settoken] = useState<string>('')
 	const [getSession, { data }] = useGetSessionMutation()
 	const { '0': trigger, '1': userData } = useLazyGetUserDataQuery()
 
@@ -32,7 +32,7 @@ const AuthDialog = () => {
 	}
 
 	const auth = async () => {
-		await getSession({ token })
+		await getSession({ token: token })
 	}
 
 	const fetchData = async (session: string) => {
@@ -43,10 +43,13 @@ const AuthDialog = () => {
 	useEffect(() => {
 		if (data?.session) {
 			const session = data?.session
-			// dispatch(setAuth(true))
 			setSessionCookie(session)
 			fetchData(session)
 		}
+	}, [data])
+
+	useEffect(() => {
+		console.log(userData.currentData)
 	}, [userData])
 
 	const [isFirstRegister, setisFirstRegister] = useState(true)
