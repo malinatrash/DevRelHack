@@ -1,4 +1,3 @@
-import { User } from '@/models/user'
 import { api } from './api'
 
 interface UserBody {
@@ -7,10 +6,8 @@ interface UserBody {
 
 const usersApi = api.injectEndpoints({
 	endpoints: builder => ({
-		getUsers: builder.query<null, User[]>({
-			query: () => {
-				return `/user`
-			},
+		getUsers: builder.query({
+			query: () => `/user`,
 		}),
 		createUser: builder.mutation({
 			query: (commentsData: UserBody) => ({

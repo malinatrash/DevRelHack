@@ -7,7 +7,7 @@ import AuthModal from '@/modal/AuthModal'
 import ModalProvider from '@/modal/ModalProvider'
 
 const Home = () => {
-	const auth = useAuth()
+	useAuth()
 	return (
 		<ThemeProvider defaultTheme='light' storageKey='vite-ui-theme'>
 			<div className='flex justify-between'>
