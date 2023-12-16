@@ -3,6 +3,7 @@ import { Button } from '@/components/ui/button'
 import { Dialog, DialogContent, DialogHeader } from '@/components/ui/dialog'
 import { Input } from '@/components/ui/input'
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
+import { useGetSessionMutation } from '@/store/api/session.api'
 import { hide } from '@/store/slices/authModalSlice'
 import { RootState } from '@/store/store'
 import { useContext, useEffect, useState } from 'react'
@@ -13,6 +14,8 @@ const AuthDialog = () => {
 	const isShown = useSelector((state: RootState) => state.authModal.isShown)
 	const dispatch = useDispatch()
 	const { show, setShow } = useContext(ModalContext)
+	const [token, settoken] = useState('')
+	const [getSession, { data, isLoading, isError }] = useGetSessionMutation()
 
 	const action = () => {
 		if (isShown) {
@@ -43,8 +46,15 @@ const AuthDialog = () => {
 								</div>
 							) : (
 								<div className='flex flex-col gap-4'>
-									<Input type='number' placeholder='444-444' />
-									<Button>Отправить</Button>
+									<Input
+										value={token}
+										onChange={e => settoken(e.target.value)}
+										type='text'
+										placeholder='abcdef'
+									/>
+									<Button onClick={() => getSession({ token })}>
+										Отправить
+									</Button>
 								</div>
 							)}
 						</div>
@@ -56,14 +66,21 @@ const AuthDialog = () => {
 									Мы используем авторизацию через телеграм, пожалуйста,
 									подключите нашего бота и возвращайтесь
 								</span>
-								<Button>
-									<a href='google.com'>Подключить</a>
+								<Button onClick={() => setisFirstRegister(false)}>
+									<a target='_blank' href='https://t.me/devrel_bot'>
+										Подключить
+									</a>
 								</Button>
 							</div>
 						) : (
 							<div className='flex flex-col gap-4'>
-								<Input type='number' placeholder='444-444' />
-								<Button>Отправить</Button>
+								<Input
+									value={token}
+									onChange={e => settoken(e.target.value)}
+									type='text'
+									placeholder='abcdef'
+								/>
+								<Button onClick={() => getSession({ token })}>Отправить</Button>
 							</div>
 						)}
 					</TabsContent>
