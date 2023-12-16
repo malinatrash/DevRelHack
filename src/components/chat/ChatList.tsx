@@ -1,8 +1,8 @@
-import User from "/db.json"
 import {ChatItem} from "@/components/chat/ChatItem";
+import usersApi from "@/store/api/users.api";
 
 export const ChatList = () => {
-    const {user} = User
+    const user = usersApi
 
     return (
         <div>

@@ -1,4 +1,3 @@
-import User from "/db.json"
 import avatar from "../../assets/logo.png"
 import {Image} from "lucide-react";
 
