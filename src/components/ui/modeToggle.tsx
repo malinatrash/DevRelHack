@@ -16,7 +16,7 @@ export function ModeToggle() {
 		<div className='hover:opacity-50'>
 			<DropdownMenu>
 				<DropdownMenuTrigger
-					className='hover:w-52 mobile:w-[13vw] mobile:hover:w-[13vw] transition-all flex gap-3 justify-center w-full'
+					className='transition-all hover:scale-105 mobile:w-[13vw]  flex gap-3 justify-center w-full'
 					asChild
 				>
 					<Button
@@ -26,7 +26,7 @@ export function ModeToggle() {
 					>
 						<div>
 							<Sun className='h-[1.2rem] w-[1.2rem] rotate-0 scale-105 transition-all dark:-rotate-90 dark:scale-0 mobile:ml-[16%]' />
-							<Moon className='absolute h-[1.2rem] w-[1.2rem] rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100 dark:top-[62px] mobile:ml-[1%]' />
+							<Moon className='hidden relative bottom-3 dark:block' />
 							<span className='sr-only'></span>
 						</div>
 						Тема

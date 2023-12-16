@@ -1,5 +1,5 @@
 import Home from '@/pages/Home.tsx'
-import { setupStore } from '@/store/store.ts'
+import { store } from '@/store/store.ts'
 import '@styles/index.css'
 import React from 'react'
 import ReactDOM from 'react-dom/client'
@@ -12,8 +12,6 @@ const router = createBrowserRouter([
 		element: <Home />,
 	},
 ])
-
-const store = setupStore()
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
 	<React.StrictMode>

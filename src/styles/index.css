@@ -6,6 +6,23 @@
 
 * {
 	font-family: 'Comfortaa', cursive;
+	font-size: 16px;
+}
+
+h1 {
+	font-family: 'Comfortaa', cursive;
+	font-weight: 500;
+	font-size: 4rem;
+}
+h2 {
+	font-family: 'Comfortaa', cursive;
+	font-weight: 300;
+	font-size: 3rem;
+}
+h3 {
+	font-family: 'Comfortaa', cursive;
+	font-weight: 300;
+	font-size: 2rem;
 }
 
 @layer base {
@@ -19,7 +36,7 @@
 		--popover: 0 0% 100%;
 		--popover-foreground: 222.2 84% 4.9%;
 
-		--primary: 222.2 47.4% 11.2%;
+		--primary: 22.2 47.4% 11.2%;
 		--primary-foreground: 210 40% 98%;
 
 		--secondary: 210 40% 96.1%;

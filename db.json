@@ -1,0 +1,60 @@
+{
+	"user": [
+		{
+			"id": 1,
+			"fullname": "Иван Иванов",
+			"imageURL": "https://bgstaff.ru/upload/bgstaff/pages/startup_programmer.png"
+		},
+		{
+			"id": 2,
+			"fullname": "Мария Петрова",
+			"imageURL": "https://blog.100ct.by/wp-content/uploads/2023/02/1-7.webp"
+		},
+		{
+			"id": 3,
+			"fullname": "Алексей Сидоров",
+			"imageURL": "https://www.osp.ru/FileStorage/DOCUMENTS_ILLUSTRATIONS/13237083/original.jpg"
+		},
+		{
+			"id": 4,
+			"fullname": "Елена Кузнецова",
+			"imageURL": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRO7ncLSyZf-xu6SzXzepUxZYCwY3R2HoXdLw&usqp=CAU"
+		},
+		{
+			"id": 5,
+			"fullname": "Димон Иванов",
+			"imageURL": "https://bgstaff.ru/upload/bgstaff/pages/startup_programmer.png"
+		},
+		{
+			"id": 6,
+			"fullname": "Денис Патруль",
+			"imageURL": "https://www.blast.hk/attachments/64804/"
+		},
+		{
+			"id": 7,
+			"fullname": "Егор Кожемяка",
+			"imageURL": "https://pikuco.ru/upload/test_stable/c42/c4238640f6ea4233a1b5085f9ef70218.webp"
+		},
+		{
+			"id": 8,
+			"fullname": "Владислав Долгоглазый",
+			"imageURL": "https://pikuco.ru/upload/test_stable/003/0033063ea5ed1c233831eb1b4d8cf33b.webp"
+		},
+		{
+			"id": 9,
+			"fullname": "Долгожуй Невероятный",
+			"imageURL": "https://avatarzo.ru/wp-content/uploads/medved-flag-rossii.jpg"
+		},
+		{
+			"id": 10,
+			"fullname": "Шайлушай",
+			"imageURL": "https://opis-cdn.tinkoffjournal.ru/mercury/shailushai-01.lumlm1j3nbru..jpg"
+		},
+		{
+			"id": 11,
+			"fullname": "Наумов Саша",
+			"imageURL": "https://static.wikia.nocookie.net/realpacan/images/3/36/Sasha.jpg/revision/latest/scale-to-width-down/350?cb=20231020115438&path-prefix=ru"
+		}
+	],
+	"event": []
+}
