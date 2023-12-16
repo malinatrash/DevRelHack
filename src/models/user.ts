@@ -1,5 +1,8 @@
 export interface User {
-	id: number
-	fullname: string
-	imageURL: string
+	id?: number
+	username?: string
+	first_name?: string
+	last_name?: string
+	imageURL?: string
+	is_staff?: false
 }

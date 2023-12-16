@@ -3,7 +3,10 @@ import { Button } from '@/components/ui/button'
 import { Dialog, DialogContent, DialogHeader } from '@/components/ui/dialog'
 import { Input } from '@/components/ui/input'
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
-import { useGetSessionMutation } from '@/store/api/session.api'
+import {
+	useGetSessionMutation,
+	useLazyGetUserDataQuery,
+} from '@/store/api/session.api'
 import { hide } from '@/store/slices/authModalSlice'
 import { RootState } from '@/store/store'
 import { useContext, useEffect, useState } from 'react'
@@ -15,13 +18,36 @@ const AuthDialog = () => {
 	const dispatch = useDispatch()
 	const { show, setShow } = useContext(ModalContext)
 	const [token, settoken] = useState('')
-	const [getSession, { data, isLoading, isError }] = useGetSessionMutation()
+	const [getSession, { data }] = useGetSessionMutation()
+	const { '0': trigger, '1': userData } = useLazyGetUserDataQuery()
+
+	function setSessionCookie(sessionId: string) {
+		document.cookie = `session=${sessionId}; path=/;`
+	}
 
 	const action = () => {
 		if (isShown) {
 			dispatch(hide())
 		}
 	}
+
+	const auth = async () => {
+		await getSession({ token })
+	}
+
+	const fetchData = async (session: string) => {
+		await trigger(session)
+		console.log(userData)
+	}
+
+	useEffect(() => {
+		if (data?.session) {
+			const session = data?.session
+			// dispatch(setAuth(true))
+			setSessionCookie(session)
+			fetchData(session)
+		}
+	}, [userData])
 
 	const [isFirstRegister, setisFirstRegister] = useState(true)
 
@@ -52,9 +78,7 @@ const AuthDialog = () => {
 										type='text'
 										placeholder='abcdef'
 									/>
-									<Button onClick={() => getSession({ token })}>
-										Отправить
-									</Button>
+									<Button onClick={auth}>Отправить</Button>
 								</div>
 							)}
 						</div>
@@ -80,7 +104,7 @@ const AuthDialog = () => {
 									type='text'
 									placeholder='abcdef'
 								/>
-								<Button onClick={() => getSession({ token })}>Отправить</Button>
+								<Button onClick={auth}>Отправить</Button>
 							</div>
 						)}
 					</TabsContent>
