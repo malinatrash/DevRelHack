@@ -2,57 +2,68 @@
 	"user": [
 		{
 			"id": 1,
-			"fullname": "Иван Иванов",
+			"first_name": "Иван",
+			"last_name": "Иванов",
 			"imageURL": "https://bgstaff.ru/upload/bgstaff/pages/startup_programmer.png"
 		},
 		{
 			"id": 2,
-			"fullname": "Мария Петрова",
+			"first_name": "Мария",
+			"last_name": "Петрова",
 			"imageURL": "https://blog.100ct.by/wp-content/uploads/2023/02/1-7.webp"
 		},
 		{
 			"id": 3,
-			"fullname": "Алексей Сидоров",
+			"first_name": "Алексей",
+			"last_name": "Сидоров",
 			"imageURL": "https://www.osp.ru/FileStorage/DOCUMENTS_ILLUSTRATIONS/13237083/original.jpg"
 		},
 		{
 			"id": 4,
-			"fullname": "Елена Кузнецова",
+			"first_name": "Елена",
+			"last_name": "Кузнецова",
 			"imageURL": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRO7ncLSyZf-xu6SzXzepUxZYCwY3R2HoXdLw&usqp=CAU"
 		},
 		{
 			"id": 5,
-			"fullname": "Димон Иванов",
+			"first_name": "Димон",
+			"last_name": "Иванов",
 			"imageURL": "https://bgstaff.ru/upload/bgstaff/pages/startup_programmer.png"
 		},
 		{
 			"id": 6,
-			"fullname": "Денис Патруль",
+			"first_name": "Денис",
+			"last_name": "Патруль",
 			"imageURL": "https://www.blast.hk/attachments/64804/"
 		},
 		{
 			"id": 7,
-			"fullname": "Егор Кожемяка",
+			"first_name": "Егор",
+			"last_name": "Кожемяка",
 			"imageURL": "https://pikuco.ru/upload/test_stable/c42/c4238640f6ea4233a1b5085f9ef70218.webp"
 		},
 		{
 			"id": 8,
-			"fullname": "Владислав Долгоглазый",
+			"first_name": "Владислав",
+			"last_name": "Долгоглазый",
 			"imageURL": "https://pikuco.ru/upload/test_stable/003/0033063ea5ed1c233831eb1b4d8cf33b.webp"
 		},
 		{
 			"id": 9,
-			"fullname": "Долгожуй Невероятный",
+			"first_name": "Долгожуй",
+			"last_name": "Невероятный",
 			"imageURL": "https://avatarzo.ru/wp-content/uploads/medved-flag-rossii.jpg"
 		},
 		{
 			"id": 10,
-			"fullname": "Шайлушай",
+			"first_name": "Шайлушай",
+			"last_name": "",
 			"imageURL": "https://opis-cdn.tinkoffjournal.ru/mercury/shailushai-01.lumlm1j3nbru..jpg"
 		},
 		{
 			"id": 11,
-			"fullname": "Наумов Саша",
+			"first_name": "Наумов",
+			"last_name": "Саша",
 			"imageURL": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSvZMJkVE6zqZ5GGneCJAxsjg2oQh4LRprBS8JmehxaAOZpv7vZ"
 		}
 	],
