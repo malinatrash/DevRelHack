@@ -10,7 +10,7 @@ const Home = () => {
 	useAuth()
 	return (
 		<ThemeProvider defaultTheme='light' storageKey='vite-ui-theme'>
-			<div className='flex justify-between'>
+			<div className='flex items-start'>
 				<SideBar />
 				<HomeDashBoard />
 			</div>
