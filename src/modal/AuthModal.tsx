@@ -8,6 +8,7 @@ import {
 	useLazyGetUserDataQuery,
 } from '@/store/api/session.api'
 import { hide } from '@/store/slices/authModalSlice'
+import { setUser } from '@/store/slices/userSlice'
 import { RootState } from '@/store/store'
 import { useContext, useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
@@ -37,7 +38,7 @@ const AuthDialog = () => {
 
 	const fetchData = async (session: string) => {
 		await trigger(session)
-		console.log(userData)
+		dispatch(setUser(userData))
 	}
 
 	useEffect(() => {

@@ -4,9 +4,9 @@ export interface User {
 	first_name?: string
 	last_name?: string
 	imageURL?: string
-	is_staff?: false
-	date_joined: string
-	skils: string[]
+	is_staff?: boolean
+	date_joined?: string
+	skills?: string[]
 }
 
 export const userMock: User = {
@@ -18,5 +18,5 @@ export const userMock: User = {
 	imageURL:
 		'https://www.google.com/url?sa=i&url=https%3A%2F%2F24smi.org%2Fperson%2F9451-kostia-voronin.html&psig=AOvVaw1uHulpMDSLzk2lkZddzQV9&ust=1702820110863000&source=images&cd=vfe&ved=0CBEQjRxqFwoTCKDTzLGJlIMDFQAAAAAdAAAAABAE',
 	date_joined: '10.10.2000',
-	skils: ['Python', 'C++', 'Java'],
+	skills: ['Python', 'C++', 'Java'],
 }
