@@ -2,6 +2,7 @@ import { api } from './api'
 
 interface UserBody {
 	id: string
+	fullname: string
 }
 
 const usersApi = api.injectEndpoints({
