@@ -7,9 +7,11 @@ import {
 } from 'lucide-react'
 import { Button } from './ui/button'
 import { ModeToggle } from './ui/modeToggle'
+import {useNavigate} from "react-router";
 
 const SideBar = () => {
 	const user = { name: 'Анастасия' }
+	const navigate = useNavigate()
 	const buttonStyles =
 		' flex gap-2 transition-all hover:opacity-80 trannsition-all hover:scale-105 text-xl cursor-pointer'
 	return (
@@ -22,7 +24,10 @@ const SideBar = () => {
 				<div className={buttonStyles}>
 					<Search /> <span>Поиск</span>
 				</div>
-				<div className={buttonStyles}>
+				<div
+					className={buttonStyles}
+					onClick={() => navigate('/chat')}
+				>
 					<MessageCircle /> <span>Чаты</span>
 				</div>
 				<div className={buttonStyles}>

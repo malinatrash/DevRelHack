@@ -5,11 +5,16 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 import { Provider } from 'react-redux'
 import { RouterProvider, createBrowserRouter } from 'react-router-dom'
+import Chat from "@/pages/Chat";
 
 const router = createBrowserRouter([
 	{
 		path: '/',
 		element: <Home />,
+	},
+	{
+		path: '/chat',
+		element: <Chat />,
 	},
 ])
 
