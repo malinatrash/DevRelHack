@@ -7,7 +7,7 @@ export const ChatHeadear = () => {
                     type="text"
                     name=""
                     id=""
-                    placeholder="Найти чат"
+                    placeholder="Найти чат по пользователю или сообщению"
                     className="rounded-2xl bg-gray-100 py-3 px-5 w-full"
                 />
             </div>
