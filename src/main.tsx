@@ -1,7 +1,6 @@
 import Home from '@/pages/Home.tsx'
 import { store } from '@/store/store.ts'
 import '@styles/index.css'
-import { Search } from 'lucide-react'
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 import { Provider } from 'react-redux'
@@ -17,10 +16,6 @@ const router = createBrowserRouter([
 	{
 		path: '/profile',
 		element: <Profile />,
-	},
-	{
-		path: '/search',
-		element: <Search />,
 	},
 	{
 		path: '/news',
