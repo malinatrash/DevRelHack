@@ -25,6 +25,7 @@ const AuthDialog = () => {
 	const dispatch = useDispatch()
 	const { show, setShow } = useContext(ModalContext)
 	const [token, settoken] = useState<string>('')
+	const [telegramId, setTelegramId] = useState<string>('')
 	const [getSession, { data, isError, isSuccess, isLoading }] =
 		useGetSessionMutation()
 	const { '0': trigger, '1': userData } = useLazyGetUserDataQuery()
@@ -53,12 +54,16 @@ const AuthDialog = () => {
 	const getCookies = async () => {
 		const sessionValue = getSessionCookie()
 		if (sessionValue !== '' && sessionValue !== null) {
-			await fetchData(sessionValue)
-			setSessionCookie(sessionValue)
-			await fetchData(sessionValue)
-			dispatch(setAuth(true))
+			await trigger(sessionValue)
 		}
 	}
+
+	useEffect(() => {
+		if (userData.data) {
+			dispatch(setUser(userData.data))
+			dispatch(setAuth(true))
+		}
+	}, [userData.data])
 
 	useEffect(() => {
 		getCookies()
@@ -70,7 +75,10 @@ const AuthDialog = () => {
 
 	const fetchData = async (session: string) => {
 		await trigger(session)
-		dispatch(setUser(userData.data))
+		if (userData.data) {
+			dispatch(setUser(userData.data))
+			dispatch(setAuth(true))
+		}
 	}
 
 	useEffect(() => {
@@ -89,6 +97,7 @@ const AuthDialog = () => {
 				description: 'Ошибка при авторизации',
 				variant: 'destructive',
 			})
+			dispatch(setAuth(false))
 		}
 	}, [isError, userData.isError])
 
@@ -97,7 +106,6 @@ const AuthDialog = () => {
 			const session = data?.session
 			setSessionCookie(session)
 			fetchData(session)
-			dispatch(setAuth(true))
 		}
 	}, [data])
 
@@ -122,7 +130,11 @@ const AuthDialog = () => {
 							<div className='flex flex-col gap-4'>
 								{isFirstRegister ? (
 									<div className='flex flex-col gap-4'>
-										<Input placeholder='@telegram-username' value={''} />
+										<Input
+											placeholder='@telegram-username'
+											value={telegramId}
+											onChange={e => setTelegramId(e.target.value)}
+										/>
 										<Button>Войти</Button>
 									</div>
 								) : (

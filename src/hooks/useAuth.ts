@@ -20,11 +20,11 @@ export const useAuth = () => {
 			user.username == '' ||
 			user.date_joined == ''
 		) {
-			toast({
-				title: 'Ошибка',
-				description: 'Войдие в аккаунт, чтобы просматривать эту страницу',
-				variant: 'destructive',
-			})
+			// toast({
+			// 	title: 'Ошибка',
+			// 	description: 'Войдие в аккаунт, чтобы просматривать эту страницу',
+			// 	variant: 'destructive',
+			// })
 			navigate('/')
 		}
 	}, [user])

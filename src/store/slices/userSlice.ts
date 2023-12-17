@@ -12,6 +12,7 @@ const initialState: AuthDataState = {
 	date_joined: '',
 	imageURL: '',
 	skills: [],
+	devevents: [],
 }
 
 export const userSlice = createSlice({

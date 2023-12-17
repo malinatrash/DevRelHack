@@ -26,7 +26,7 @@ export const HomeDashBoard = () => {
 				<ScrollArea className=' rounded-md bg-secondary'>
 					<div className='flex space-x-4 p-4 max-w-[75vw]'>
 						{users.map(e => (
-							<UserCardItem user={e} />
+							<UserCardItem key={e.id} user={e} />
 						))}
 					</div>
 					<ScrollBar orientation='horizontal' />

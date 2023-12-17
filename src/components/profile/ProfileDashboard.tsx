@@ -1,4 +1,5 @@
 import { useAppSelector } from '@/hooks/redux'
+import { parseDate } from '@/scripts/dates'
 import { FC } from 'react'
 import { Badge } from '../ui/badge'
 
@@ -12,7 +13,7 @@ const ProfileDashboard: FC = () => {
 			</div>
 			<div>
 				<h2>Роль: {user.is_staff ? 'Администратор' : 'Пользователь'}</h2>
-				<h3>Дата Регистрации: {user.date_joined} </h3>
+				<h3>Дата Регистрации: {parseDate(user.date_joined ?? '')} </h3>
 				<div className='flex gap-3 w-full bg-secondary pr-32 p-8 rounded-lg mt-20'>
 					Ваши Навыки:{' '}
 					{user.skills?.map(e => (
