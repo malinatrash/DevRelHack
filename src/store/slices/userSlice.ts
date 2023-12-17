@@ -11,7 +11,7 @@ const initialState: AuthDataState = {
 	username: '',
 	date_joined: '',
 	imageURL: '',
-	skills: [],
+	specs: [],
 	devevents: [],
 }
 
@@ -26,6 +26,7 @@ export const userSlice = createSlice({
 			state.last_name = actions.payload.last_name
 			state.is_staff = actions.payload.is_staff
 			state.username = actions.payload.username
+			state.imageURL = 'https://random.imagecdn.app/200/200'
 		},
 	},
 })

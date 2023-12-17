@@ -16,7 +16,7 @@ const ProfileDashboard: FC = () => {
 				<h3>Дата Регистрации: {parseDate(user.date_joined ?? '')} </h3>
 				<div className='flex gap-3 w-full bg-secondary pr-32 p-8 rounded-lg mt-20'>
 					Ваши Навыки:{' '}
-					{user.skills?.map(e => (
+					{user.specs?.map(e => (
 						<Badge children={e} />
 					))}
 				</div>

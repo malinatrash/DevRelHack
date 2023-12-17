@@ -6,11 +6,11 @@ export interface User {
 	imageURL?: string
 	is_staff?: boolean
 	date_joined?: string
-	skills?: string[]
+	specs?: string[]
 	devevents?: DevEvent[]
 }
 
-interface DevEvent {
+export interface DevEvent {
 	id: number
 	name: string
 	start_date: string
