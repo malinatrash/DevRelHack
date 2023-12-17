@@ -52,7 +52,7 @@ const SideBar = () => {
 						<Mail /> <span>Рассылки</span>
 					</div>
 				) : (
-					<div className={buttonStyles}>
+					<div onClick={() => navigate('/news')} className={buttonStyles}>
 						<Mail /> <span>Новости</span>
 					</div>
 				)}

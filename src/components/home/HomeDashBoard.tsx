@@ -1,8 +1,8 @@
-import { useAppSelector } from '@/hooks/redux'
-import { User } from '@/models/user'
+import { User, devevents } from '@/models/user'
 import { fetchUsers } from '@/store/api/fetchUsers'
 import { useEffect, useState } from 'react'
 import { ScrollArea, ScrollBar } from '../ui/scroll-area'
+import EventCardItem from './EventCardItem'
 import UserCardItem from './UserCardItem'
 
 export const HomeDashBoard = () => {
@@ -13,7 +13,6 @@ export const HomeDashBoard = () => {
 	useEffect(() => {
 		fetchUser()
 	}, [])
-	const user = useAppSelector(state => state.userData)
 	return (
 		<div className='flex flex-col gap-12 pt-3 px-8'>
 			<div>
@@ -22,8 +21,8 @@ export const HomeDashBoard = () => {
 			<div>
 				<h2>Недавние мероприятия</h2>
 				<ScrollArea className=' rounded-md bg-secondary'>
-					<div className='flex space-x-4 p-4 max-w-[74vw]'>
-						{user.devevents?.map(e => (
+					<div className='flex space-x-4 p-4 max-w-[73vw]'>
+						{devevents.map(e => (
 							<EventCardItem event={e} />
 						))}
 					</div>
@@ -33,7 +32,7 @@ export const HomeDashBoard = () => {
 			<div className='w-auto'>
 				<h2>Возможно, вы знакомы</h2>
 				<ScrollArea className=' rounded-md bg-secondary'>
-					<div className='flex space-x-4 p-4 max-w-[74vw]'>
+					<div className='flex space-x-4 p-4 max-w-[73vw]'>
 						{users.map(e => (
 							<UserCardItem key={e.id} user={e} />
 						))}

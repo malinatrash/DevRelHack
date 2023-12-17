@@ -6,6 +6,7 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 import { Provider } from 'react-redux'
 import { RouterProvider, createBrowserRouter } from 'react-router-dom'
+import News from './pages/News'
 import Profile from './pages/Profile'
 
 const router = createBrowserRouter([
@@ -20,6 +21,10 @@ const router = createBrowserRouter([
 	{
 		path: '/search',
 		element: <Search />,
+	},
+	{
+		path: '/news',
+		element: <News />,
 	},
 ])
 
