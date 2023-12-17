@@ -1,6 +1,5 @@
 import SideBar from '@/components/SideBar'
 import { ChatExplorer } from '@/components/chat/ChatExplorer'
-import ChatMessagesWindow from '@/components/chat/ChatMessagesWindow'
 import { ThemeProvider } from '@/components/theme-provider'
 
 const Chat = () => {
@@ -12,7 +11,6 @@ const Chat = () => {
 					<div className='container mx-auto shadow-lg rounded-lg'>
 						<div className='flex'>
 							<ChatExplorer />
-							<ChatMessagesWindow />
 						</div>
 					</div>
 				</div>
