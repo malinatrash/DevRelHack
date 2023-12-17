@@ -135,7 +135,12 @@ const AuthDialog = () => {
 											value={telegramId}
 											onChange={e => setTelegramId(e.target.value)}
 										/>
-										<Button>Войти</Button>
+										<Button
+											disabled={telegramId === '' || telegramId.length < 4}
+											onClick={() => setisFirstRegister(false)}
+										>
+											Войти
+										</Button>
 									</div>
 								) : (
 									<div className='flex flex-col gap-4'>

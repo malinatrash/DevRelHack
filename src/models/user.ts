@@ -50,7 +50,7 @@ export const devevents: DevEvent[] = [
 		event_type: 2,
 		name: 'Событие 4',
 		start_date: '2023-09-18',
-		users: [4, 8, 10, 14],
+		users: [4, 8, 10, 2],
 	},
 	{
 		id: 5,
@@ -58,7 +58,7 @@ export const devevents: DevEvent[] = [
 		event_type: 3,
 		name: 'Событие 5',
 		start_date: '2023-07-05',
-		users: [1, 6, 9, 13],
+		users: [1, 6, 9, 4],
 	},
 	{
 		id: 6,
@@ -66,7 +66,7 @@ export const devevents: DevEvent[] = [
 		event_type: 1,
 		name: 'Событие 6',
 		start_date: '2023-10-30',
-		users: [2, 7, 11, 15],
+		users: [2, 7, 11, 6],
 	},
 	{
 		id: 7,
@@ -82,7 +82,7 @@ export const devevents: DevEvent[] = [
 		event_type: 3,
 		name: 'Событие 8',
 		start_date: '2023-12-10',
-		users: [5, 9, 12, 14],
+		users: [5, 9, 3, 2],
 	},
 	{
 		id: 9,

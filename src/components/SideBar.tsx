@@ -47,8 +47,8 @@ const SideBar = () => {
 				<div onClick={() => navigate('/chat')} className={buttonStyles}>
 					<MessageCircle /> <span>Чаты</span>
 				</div>
-				{user.is_staff ? (
-					<div className={buttonStyles}>
+				{!user.is_staff ? (
+					<div onClick={() => navigate('/messages')} className={buttonStyles}>
 						<Mail /> <span>Рассылки</span>
 					</div>
 				) : (
