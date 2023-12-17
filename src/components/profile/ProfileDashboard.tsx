@@ -1,6 +1,5 @@
 import { useAppSelector } from '@/hooks/redux'
 import { User, devevents } from '@/models/user'
-import { parseDate } from '@/scripts/dates'
 import { fetchUsers } from '@/store/api/fetchUsers'
 import { FC, useEffect, useState } from 'react'
 import EventCardItem from '../home/EventCardItem'
@@ -24,7 +23,7 @@ const ProfileDashboard: FC = () => {
 			</div>
 			<div>
 				<h3>Роль: {user.is_staff ? 'DevRel' : 'Пользователь'}</h3>
-				<h3>Дата Регистрации: {parseDate(user.date_joined ?? '')} </h3>
+				<h3>Дата Регистрации: </h3>
 				{!user.is_staff && (
 					<div className='flex gap-3 w-full bg-secondary pr-32 p-8 rounded-lg mt-20'>
 						Ваши Навыки:{' '}

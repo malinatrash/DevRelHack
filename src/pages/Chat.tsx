@@ -1,6 +1,5 @@
 import SideBar from '@/components/SideBar'
 import { ChatExplorer } from '@/components/chat/ChatExplorer'
-import { ChatHeadear } from '@/components/chat/ChatHeadear'
 import ChatMessagesWindow from '@/components/chat/ChatMessagesWindow'
 import { ThemeProvider } from '@/components/theme-provider'
 
@@ -11,7 +10,6 @@ const Chat = () => {
 				<SideBar />
 				<div className='flex-1 flex flex-col'>
 					<div className='container mx-auto shadow-lg rounded-lg'>
-						<ChatHeadear />
 						<div className='flex'>
 							<ChatExplorer />
 							<ChatMessagesWindow />
