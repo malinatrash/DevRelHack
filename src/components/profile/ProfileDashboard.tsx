@@ -1,9 +1,10 @@
-import { userMock } from '@/models/user'
+import { useAppSelector } from '@/hooks/redux'
 import { FC } from 'react'
 import { Badge } from '../ui/badge'
 
 const ProfileDashboard: FC = () => {
-	const user = userMock
+	const user = useAppSelector(state => state.userData)
+
 	return (
 		<div className='pl-28 pt-8 min-h-screen max-h-full flex flex-col gap-12 px-8'>
 			<div>

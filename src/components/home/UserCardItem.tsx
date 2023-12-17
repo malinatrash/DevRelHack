@@ -11,7 +11,6 @@ const UserCardItem: FC<IUserCardItem> = ({ user }) => {
 	const names = `${user.first_name?.charAt(0) ?? ''}${
 		user.last_name?.charAt(0) ?? ''
 	}`
-	console.log(user)
 
 	return (
 		<div className='flex flex-col gap-2 max-w-[10rem] items-center bg-secondary p-4 justify-evenly'>

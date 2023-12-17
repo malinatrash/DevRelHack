@@ -24,9 +24,11 @@ const SideBar = () => {
 				<div onClick={() => navigate('/profile')} className={buttonStyles}>
 					<User2Icon /> <span>Профиль</span>
 				</div>
-				<div className={buttonStyles}>
-					<Search /> <span>Поиск</span>
-				</div>
+				{user.is_staff && (
+					<div className={buttonStyles}>
+						<Search /> <span>Поиск</span>
+					</div>
+				)}
 				<div className={buttonStyles}>
 					<MessageCircle /> <span>Чаты</span>
 				</div>

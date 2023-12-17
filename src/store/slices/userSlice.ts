@@ -19,12 +19,11 @@ export const userSlice = createSlice({
 	initialState,
 	reducers: {
 		setUser: (state, actions) => {
+			state.id = actions.payload.id
 			state.date_joined = actions.payload.date_joined
 			state.first_name = actions.payload.first_name
-			state.id = actions.payload.id
-			state.imageURL = actions.payload.imageURL
+			state.last_name = actions.payload.last_name
 			state.is_staff = actions.payload.is_staff
-			state.skills = actions.payload.skills
 			state.username = actions.payload.username
 		},
 	},

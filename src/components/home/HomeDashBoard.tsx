@@ -8,7 +8,6 @@ export const HomeDashBoard = () => {
 	const [users, setusers] = useState<User[]>([])
 	const fetchUser = async () => {
 		await fetchUsers().then(r => setusers(r))
-		console.log(users)
 	}
 	useEffect(() => {
 		fetchUser()
