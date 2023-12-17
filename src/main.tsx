@@ -7,6 +7,7 @@ import { Provider } from 'react-redux'
 import { RouterProvider, createBrowserRouter } from 'react-router-dom'
 import News from './pages/News'
 import Profile from './pages/Profile'
+import Chat from "@/pages/Chat";
 
 const router = createBrowserRouter([
 	{
@@ -20,6 +21,10 @@ const router = createBrowserRouter([
 	{
 		path: '/news',
 		element: <News />,
+	},
+	{
+		path: '/chat',
+		element: <Chat />,
 	},
 ])
 

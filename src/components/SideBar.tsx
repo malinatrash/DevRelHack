@@ -44,7 +44,7 @@ const SideBar = () => {
 						<Search /> <span>Поиск</span>
 					</div>
 				)}
-				<div className={buttonStyles}>
+				<div onClick={() => navigate('/chat')} className={buttonStyles}>
 					<MessageCircle /> <span>Чаты</span>
 				</div>
 				{user.is_staff ? (
