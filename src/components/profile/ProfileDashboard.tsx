@@ -23,7 +23,6 @@ const ProfileDashboard: FC = () => {
 			</div>
 			<div>
 				<h3>Роль: {user.is_staff ? 'DevRel' : 'Пользователь'}</h3>
-				<h3>Дата Регистрации: </h3>
 				{!user.is_staff && (
 					<div className='flex gap-3 w-full bg-secondary pr-32 p-8 rounded-lg mt-20'>
 						Ваши Навыки:{' '}
